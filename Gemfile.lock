@@ -67,6 +67,8 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     erubi (1.10.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     ffi (1.15.3)
     globalid (0.5.1)
       activesupport (>= 5.0)
@@ -89,7 +91,7 @@ GEM
     nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
     pg (1.2.3)
-    puma (5.3.2)
+    puma (5.4.0)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -147,6 +149,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
+  fast_jsonapi
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
