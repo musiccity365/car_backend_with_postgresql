@@ -1,7 +1,7 @@
 class Api::V1::CarsController < ApplicationController
   def index
     cars = Car.all
-    render json: cars
+    render json: CarSerializer.new(cars) # creates a data object instance
   end
 
   def create
