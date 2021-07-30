@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_07_29_002807) do
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "origin_id"
+    t.bigint "origin_id", null: false
     t.index ["origin_id"], name: "index_cars_on_origin_id"
   end
 
