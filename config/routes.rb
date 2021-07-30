@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do # version 1
       resources :cars, only: [:index, :create]
+      resources :origins, only: [:index]
     end
   end
 end
