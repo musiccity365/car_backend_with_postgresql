@@ -1,4 +1,5 @@
 class CarSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :year, :make, :model, :image_url, :origin_id, :origin
+  belongs_to :origin
+  attributes :year, :make, :model, :image_url, :origin_id
 end
