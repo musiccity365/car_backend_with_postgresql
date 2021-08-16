@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   # use namespace in our backend to indicate that our routes are associated with the api
   namespace :api do
     namespace :v1 do # version 1
+<<<<<<< HEAD
       resources :cars, only: [:index, :create, :destroy, :update]
+=======
+      resources :cars, only: [:index, :create]
+>>>>>>> parent of 7874b0d (modify actions, routes, and serializers)
       resources :origins, only: [:index]
     end
   end
