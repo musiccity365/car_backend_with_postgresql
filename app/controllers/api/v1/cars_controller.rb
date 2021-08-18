@@ -1,7 +1,12 @@
 class Api::V1::CarsController < ApplicationController
   def index
     cars = Car.all
-    render json: CarSerializer.new(cars) # creates a data object instance
+    render json: CarSerializer.new(cars) # creates a data car instance
+  end
+
+  def show
+    car = Car.find(params[:id])
+    render json: CarSerializer.new(car)
   end
 
   def create
@@ -12,6 +17,22 @@ class Api::V1::CarsController < ApplicationController
       render json: {errors: car.errors.full_messages}, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    car = Car.find(params[:id])
+    car.destroy
+    render json: {message: "#{car.id} deleted!"}
+  end
+
+  def update
+    car = Car.find(params[:id])
+      if car.update(car_params)
+        render json: CarSerializer.new(car)
+      else
+        render json: {error: "Error updating"}
+      end
+  end
+  
 
   private
   
