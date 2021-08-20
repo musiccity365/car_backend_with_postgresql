@@ -19,19 +19,21 @@ class Api::V1::CarsController < ApplicationController
   end
 
   def destroy
-    car = Car.find(params[:id])
-    car.destroy
-    render json: {message: "#{car.id} deleted!"}
+    if car.destroy
+      render json: {message: "Successfully deleted!"}
+    else
+      render json: {message: "Failed to delete!"}
+    end
   end
 
-  def update
-    car = Car.find(params[:id])
-      if car.update(car_params)
-        render json: CarSerializer.new(car)
-      else
-        render json: {error: "Error updating"}
-      end
-  end
+  # def update
+  #   car = Car.find(params[:id])
+  #     if car.update(car_params)
+  #       render json: CarSerializer.new(car)
+  #     else
+  #       render json: {error: "Error updating #{car.id}!"}
+  #     end
+  # end
   
 
   private

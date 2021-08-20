@@ -3,4 +3,5 @@ class Api::V1::OriginsController < ApplicationController
     origins = Origin.all
     render json: OriginSerializer.new(origins)
   end
+
 end
