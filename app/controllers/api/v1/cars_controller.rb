@@ -19,11 +19,9 @@ class Api::V1::CarsController < ApplicationController
   end
 
   def destroy
-    if car.destroy
-      render json: {message: "Successfully deleted!"}
-    else
-      render json: {message: "Failed to delete!"}
-    end
+    car = Car.find(params[:id])
+    car.destroy
+    render json: {message: "#{car.id} deleted!"}
   end
 
   # def update
