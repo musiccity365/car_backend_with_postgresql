@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # use namespace in our backend to indicate that our routes are associated with the api
   namespace :api do
     namespace :v1 do # version 1
-      resources :cars, only: [:index, :create, :destroy]
+      resources :cars
       resources :origins
     end
   end
