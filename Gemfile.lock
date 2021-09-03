@@ -148,14 +148,14 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
-  bootsnap (>= 1.4.4)
+  bootsnap (~> 1.8, >= 1.8.1)
   byebug
   fast_jsonapi
-  listen (~> 3.3)
-  pg (~> 1.1)
-  puma (~> 5.0)
+  listen (~> 3.7)
+  pg (~> 1.2, >= 1.2.3)
+  puma (~> 5.4)
   rack-cors
-  rails (~> 6.1.4)
+  rails (~> 6.1, >= 6.1.4.1)
   tzinfo-data
 
 RUBY VERSION
