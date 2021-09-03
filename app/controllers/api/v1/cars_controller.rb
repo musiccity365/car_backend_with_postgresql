@@ -17,8 +17,9 @@ class Api::V1::CarsController < ApplicationController
       render json: {errors: car.errors.full_messages}, status: :unprocessable_entity
     end
   end
-
+  
   def destroy
+    # byebug
     car = Car.find(params[:id])
     car.destroy
     render json: {message: "#{car.id} deleted!"}
