@@ -1,4 +1,4 @@
 class Car < ApplicationRecord
   belongs_to :origin
-  # validates :make, presence: true
+  validates :year, :make, :model, :image_url, :origin_id, presence: true
 end
